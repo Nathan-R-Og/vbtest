@@ -1,0 +1,8 @@
+*.elf
+*.vb
+*.o
+*.ninja
+.ninja_log
+build/
+tools/v810-gcc/
+__pycache__

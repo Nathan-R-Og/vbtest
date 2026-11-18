@@ -1,0 +1,16 @@
+#!/bin/bash
+#get link
+rm -rf ./tools/v810-gcc/
+wget https://github.com/jbrandwood/v810-gcc/releases/download/latest/v810-gcc-Linux-x86_64.zip
+unzip v810-gcc-Linux-x86_64.zip -d ./tools/
+rm -rf v810-gcc-Linux-x86_64.zip
+
+sudo apt update
+sudo apt -y install python3 python3-pip ipython3
+pip install ninja_syntax
+pip install pyyaml
+pip install pillow
+
+sudo wget -qO /usr/local/bin/ninja.gz https://github.com/ninja-build/ninja/releases/latest/download/ninja-linux.zip
+sudo gunzip /usr/local/bin/ninja.gz
+sudo chmod a+x /usr/local/bin/ninja
